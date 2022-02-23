@@ -1,0 +1,76 @@
+.file {
+    overflow: hidden;
+    width: 100%;
+    &__input {
+        display: none;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 13px;
+    }
+    &__body {
+        border: 1px dashed #c4c4c4;
+        box-sizing: border-box;
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        cursor: pointer;
+        transition: border 0.2s;
+
+        &-bordered {
+            border: 1px dashed rgb(192, 94, 94);
+        }
+    }
+
+    &__meta {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &-delete {
+            color: red;
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+    &__text {
+        margin-top: 30px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    &__completed {
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+        overflow: hidden;
+    }
+    &__preview {
+        $size: 60px;
+        padding-right: 10px;
+        img,
+        video {
+            width: $size;
+            height: $size;
+            border-radius: $size;
+            object-fit: cover;
+        }
+    }
+    &__await {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+}

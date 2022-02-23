@@ -1,0 +1,12 @@
+.follower {
+    display: flex;
+    justify-content: space-between;
+    // background: #f0f0f0;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-top: 10px;
+    &__user {
+        overflow: hidden;
+    }
+}

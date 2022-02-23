@@ -1,0 +1,177 @@
+.mainframe {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 65px;
+    &__fullbtn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.493);
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+    }
+    &__body {
+        position: relative;
+    }
+    &__file {
+        $height: 350px;
+        height: $height;
+        position: relative;
+        display: flex;
+        align-items: center;
+        img,
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        audio {
+            width: 100%;
+        }
+
+        &-fullscreen {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $main_color;
+
+            img,
+            video {
+                width: initial;
+                height: initial;
+                max-width: 100vw;
+                max-height: 100vh;
+            }
+        }
+
+        &-opened {
+            height: initial;
+        }
+    }
+    &__bid {
+    }
+
+    .bid {
+        max-width: 600px;
+        width: 100%;
+        background: $second_color;
+        box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.05);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        height: 75px;
+        transform: translate(-50%, 50%);
+        &__item {
+            flex: 0 1 27%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 12px 20px;
+            &:first-child {
+                flex: 1 0 46%;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                height: 43px;
+                width: 3px;
+                background: rgba(255, 255, 255, 0.15);
+                border-radius: 12px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        &__item-title {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: $gray_text_color;
+            margin-bottom: 8px;
+        }
+
+        &__item-content {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 5px;
+                width: 20px;
+                height: 20px;
+            }
+            p {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: $white_color;
+            }
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: $gray_text_color;
+                margin-left: 4px;
+            }
+        }
+
+        &__item-button {
+            span {
+                white-space: nowrap;
+                width: 100%;
+                font-size: 14px;
+                padding: 13px 33px;
+            }
+        }
+    }
+    @media (max-width: 620px) {
+        margin-bottom: 30px;
+        .bid {
+            margin-top: 20px;
+            max-width: none;
+            width: 100%;
+            position: static;
+            // flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 100%;
+            background: none;
+            left: 0;
+            top: 0;
+            transform: translate(0, 0);
+            &__item {
+                padding: 5px 10px;
+                flex: none;
+                margin-bottom: 10px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

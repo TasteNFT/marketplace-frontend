@@ -1,0 +1,26 @@
+.price {
+    display: flex;
+    align-items: center;
+    &__logo {
+        margin-right: 5px;
+        width: 20px;
+        height: 20px;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__cost {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #fff;
+    }
+    &__usd {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-left: 4px;
+    }
+}

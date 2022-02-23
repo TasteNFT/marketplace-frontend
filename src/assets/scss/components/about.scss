@@ -1,0 +1,18 @@
+.about {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__left {
+        min-width: 350px;
+        flex: 1;
+    }
+
+    &__right {
+        min-width: 350px;
+    }
+    &--wrapreverse {
+        flex-wrap: wrap-reverse;
+    }
+}

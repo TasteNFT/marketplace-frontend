@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    li {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        background: linear-gradient(270deg, #8743ff 0%, #4136f1 100%);
+        margin: 0 5px;
+
+        a {
+            width: 100%;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        &.selected {
+            cursor: initial;
+            background: linear-gradient(270deg, #bebebe 0%, #5c5c5c 100%);
+        }
+
+        &.previous {
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.btn {
+    background: $button_bg_color;
+    box-shadow: $button_shadow;
+    border-radius: 12px;
+    // width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    padding: 10px;
+    user-select: none;
+    transition: box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+
+    &:hover {
+        background: $button_bg_color_hover;
+        box-shadow: 0 0 7px -1px black;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        img,
+        i {
+            height: 20px;
+        }
+    }
+
+    &_fill {
+        width: 100%;
+    }
+    &_large {
+        padding: 10px 30px;
+    }
+    &_semitransparent {
+        background: linear-gradient(
+            270deg,
+            rgba(135, 67, 255, 0.2) 0%,
+            rgba(65, 54, 241, 0.2) 100%
+        );
+        span {
+            color: white;
+            @include gradientColor;
+        }
+    }
+    &_orange {
+        background: linear-gradient(270deg, #ff6e43 0%, #f1d136 100%);
+
+        &:hover {
+            background: linear-gradient(270deg, #f1d136 0%, #ff6e43 100%);
+        }
+    }
+
+    &:disabled {
+        background: #1d2228;
+        color: #5d5d5d;
+    }
+}
+.text-btns {
+    display: flex;
+    align-items: center;
+    &__btn {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-right: 24px;
+        cursor: pointer;
+        user-select: none;
+        &:hover,
+        &-active {
+            color: $white_color;
+        }
+    }
+}

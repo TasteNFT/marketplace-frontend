@@ -1,0 +1,41 @@
+.swiper {
+    &-container {
+        // max-width: 786px;
+        // height: 548px;
+        // width: 100%;
+        max-width: 600px;
+        width: 100%;
+    }
+    &-slide {
+        justify-content: center;
+        display: flex;
+        width: 419px;
+        height: 419px;
+        img,
+        video {
+            width: 419px;
+            height: 419px;
+            object-fit: cover;
+            @media (max-width: 600px) {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        @media (max-width: 600px) {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    &-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // bottom: -10px !important;
+        &-bullet {
+            width: 95px;
+            height: 10px;
+            background: $gray_text_color;
+            border-radius: 99px;
+        }
+    }
+}

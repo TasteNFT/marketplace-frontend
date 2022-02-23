@@ -1,0 +1,83 @@
+.input {
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    &__title {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    &__body {
+        // font-size: 16px;
+        display: flex;
+        background: $main_color;
+        padding: 10px 16px;
+        align-items: center;
+        border-radius: 8px;
+        flex: 1;
+        position: relative;
+
+        input,
+        textarea {
+            flex: 1;
+            background: transparent;
+            color: $white_color;
+
+            &::-webkit-calendar-picker-indicator {
+                filter: invert(1);
+            }
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+    }
+    &__helper {
+        padding-left: 16px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    &__info {
+        padding-left: 10px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+    &__icon {
+        padding: 0 10px 0 0;
+        img {
+            width: 20px;
+            text-align: center;
+        }
+    }
+    &__logotitle {
+        color: $white_color;
+        min-width: 100px;
+        padding-right: 10px;
+    }
+    &__error {
+        $bg: rgb(255 110 110 / 40%);
+        position: absolute;
+        bottom: calc(100% + 10px);
+        background: $bg;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:after {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 10px solid transparent;
+            border-top: 10px solid $bg;
+        }
+    }
+}

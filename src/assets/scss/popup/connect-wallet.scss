@@ -1,0 +1,65 @@
+.connect-wallet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding: 0 10px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 160px;
+        text-align: center;
+        &-video {
+            position: relative;
+            max-width: 160px;
+            width: 100%;
+            margin-bottom: 12px;
+
+            &:before {
+                content: attr(data-number);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: -10px;
+                top: -27px;
+                width: 40px;
+                line-height: 40px;
+                font-weight: bold;
+                font-size: 20px;
+                color: #1f2b38;
+                background: $white_color;
+                box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+                border-radius: 16px;
+            }
+        }
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.62);
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            transform: translate(15%);
+        }
+    }
+
+    &__text {
+    }
+    @media (max-width: 590px) {
+        flex-direction: column;
+        &__item {
+            margin-bottom: 15px;
+        }
+    }
+}

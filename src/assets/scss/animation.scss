@@ -1,0 +1,17 @@
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        stroke-dashoffset: 39.6;
+    }
+    50% {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
+        stroke-dashoffset: 188.4;
+    }
+    100% {
+        -webkit-transform: rotate(1080deg);
+        transform: rotate(1080deg);
+        stroke-dashoffset: 39.6;
+    }
+}

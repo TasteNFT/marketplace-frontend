@@ -1,0 +1,102 @@
+.activities {
+    width: 100%;
+    $media: 1162px;
+
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        color: $white_color;
+        margin-bottom: 15px;
+    }
+
+    &__content {
+        max-height: 564px;
+        overflow-y: scroll;
+    }
+}
+
+.activity {
+    $media: 1162px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 778px;
+    width: 100%;
+    border: 1px solid #333940;
+    padding: 15px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+
+    &__avatar {
+        $size: 32px;
+        height: $size;
+        width: $size;
+        margin-right: 10px;
+
+        img {
+            height: $size;
+            width: $size;
+            object-fit: cover;
+            filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.15));
+            border-radius: 8px;
+        }
+    }
+    &__logo {
+        $size: 20px;
+        width: $size;
+        height: $size;
+        margin-right: 5px;
+
+        img {
+            width: $size;
+            height: $size;
+        }
+    }
+    &__bid {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        margin-right: 10px;
+    }
+    &__info {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__from {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: $white_color;
+        margin-bottom: 4px;
+        white-space: nowrap;
+    }
+    &__date {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $gray_text_color;
+    }
+
+    &__sold {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    &__usd {
+        color: rgba(255, 255, 255, 0.5);
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,73 @@
+.import {
+    &-token {
+        margin-top: 20px;
+
+        $size: 300px;
+        &-header {
+            display: flex;
+            align-items: center;
+            &__title {
+            }
+            &__line {
+                flex: 1;
+                padding: 0 20px;
+
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background: rgba(255, 255, 255, 0.1);
+                    display: flex;
+                }
+            }
+        }
+
+        &__items {
+            display: flex;
+            overflow-y: auto;
+        }
+        &__item {
+            width: $size;
+            margin: 10px 10px;
+            position: relative;
+            border: 1px solid #333940;
+            box-sizing: content-box;
+            margin-top: 10px;
+        }
+
+        &__image {
+            width: 100%;
+            height: $size;
+            position: relative;
+            cursor: pointer;
+            img,
+            video,
+            audio {
+                width: $size;
+                height: $size;
+                object-fit: cover;
+            }
+            &:after {
+                content: attr(data-alert);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 40px;
+            }
+        }
+        &__title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+            color: #fff;
+            padding: 0 0 0 16px;
+            margin: 24px 0 17px 0;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.share {
+    $itemSize: 50px;
+    display: flex;
+    justify-content: center;
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $itemSize;
+        height: $itemSize;
+        border-radius: $itemSize;
+        border: 1px solid grey;
+        cursor: pointer;
+        margin-right: 10px;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

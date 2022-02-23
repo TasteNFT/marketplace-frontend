@@ -1,0 +1,12 @@
+.username {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    background: linear-gradient(270deg, #8743ff 0%, #d8c2ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
